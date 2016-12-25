@@ -7,7 +7,7 @@
  */
 public class EX_03 {
     public static void main(String[] args) {
-        int[] test = new int[]{1, 2, 2, 3, 3, 5};
+        int[] test = new int[]{10, 200, 2000, 30000, 3, 5};
         int[] res = radixSort(test, 6);
     }
 
@@ -265,15 +265,15 @@ public class EX_03 {
         if (n < 2) {
             return A;
         }
-        int m = 1;
-        int index = 1;
-        int k = 0;
+        int m = 1;//最大值的位数
+        int index = 1;//指向的位数
+        int k = 0;//最后输出的结果
         int[][] help = new int[10][n];
-        int[] count = new int[n];
-        while (m++ <= 4) {
+        int[] count = new int[n];//每一个help数组中的每一个桶中的数目
+        while (m++ <= 5) {
             for (int i = 0; i < n; i++) {
-                int lsd = A[i] / index % 10;
-                help[lsd][count[lsd]++] = A[i];
+                int lsd = A[i] / index % 10;//得到余数
+                help[lsd][count[lsd]++] = A[i];//
             }
             for (int i = 0; i < n; i++) {
                 if (count[i] > 0) {
