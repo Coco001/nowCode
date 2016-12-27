@@ -27,7 +27,7 @@ public class Ex_20 {
     弹出规则为：
     如果qmax队头的下标等于 i - w ，弹出qmax当前队头的下标*/
 
-    public static int[] slide(int[] arr, int n, int w) {
+    private static int[] slide(int[] arr, int n, int w) {
         // write code here
         int[] res = new int[n - w + 1];
         int index = 0;
