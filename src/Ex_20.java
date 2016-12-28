@@ -1,5 +1,4 @@
 import java.util.ArrayDeque;
-import java.util.Deque;
 
 /**
  * 有一个整型数组 arr 和一个大小为 w 的窗口从数组的最左边滑到最右边，窗口每次向右边滑一个位置，返回一个长度为n-w+1的数组res，res[ i ]表示每一种窗口状态下的最大值。
