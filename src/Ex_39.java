@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.LinkedList;
 
 /**
@@ -19,7 +18,7 @@ public class Ex_39 {
     public int[][] convert(TreeNode root) {
         // write code here
         int[][] res = new int[3][];
-        func1(root);
+        PreOrderTraverse(root);
         int[] temp1 = new int[list.size()];
         int index = 0;
         for (Integer i : list) {
@@ -28,7 +27,7 @@ public class Ex_39 {
         res[0] = temp1;
         list.clear();
 
-        func2(root);
+        InOrderTraverse(root);
         int[] temp2 = new int[list.size()];
         index = 0;
         for (Integer i : list) {
@@ -37,7 +36,7 @@ public class Ex_39 {
         res[1] = temp2;
         list.clear();
 
-        func3(root);
+        PostOrderTraverse(root);
         int[] temp3 = new int[list.size()];
         index = 0;
         for (Integer i : list) {
@@ -46,29 +45,31 @@ public class Ex_39 {
         res[2] = temp3;
         return res;
     }
-
-    private void func1(TreeNode node) {
+    //前序遍历
+    private void PreOrderTraverse(TreeNode node) {
         if (node == null) {
             return ;
         }
         list.add(node.val);
-        func1(node.left);
-        func1(node.right);
+        PreOrderTraverse(node.left);
+        PreOrderTraverse(node.right);
     }
-    private void func2(TreeNode node) {
+    //中序遍历
+    private void InOrderTraverse(TreeNode node) {
         if (node == null) {
             return ;
         }
-        func2(node.left);
+        InOrderTraverse(node.left);
         list.add(node.val);
-        func2(node.right);
+        InOrderTraverse(node.right);
     }
-    private void func3(TreeNode node) {
+    //后续遍历
+    private void PostOrderTraverse(TreeNode node) {
         if (node == null) {
             return ;
         }
-        func3(node.left);
-        func3(node.right);
+        PostOrderTraverse(node.left);
+        PostOrderTraverse(node.right);
         list.add(node.val);
     }
 }
