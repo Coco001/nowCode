@@ -27,14 +27,14 @@ public class Ex_42 {
             return level;
         }
         int leftHeight = getHeight(node.left, level + 1, res);
-        if (!res[0]) {
-            return leftHeight;
+        if (!res[0]) {//左子树是否为平衡二叉树
+            return leftHeight;//左子树的深度
         }
         int rightHeight = getHeight(node.right, level + 1, res);
-        if (!res[0]) {
-            return rightHeight;
+        if (!res[0]) {//右子树是否为平衡二叉树
+            return rightHeight;//右子树的深度
         }
-        if (Math.abs(leftHeight - rightHeight) > 1) {
+        if (Math.abs(leftHeight - rightHeight) > 1) {//左右子树深度差超过1，不是平衡二叉树
             res[0] = false;
         }
         return Math.max(leftHeight, rightHeight);
