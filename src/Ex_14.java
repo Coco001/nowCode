@@ -36,6 +36,7 @@ public class Ex_14 {
                 return false;
             }
         }
+        
         return num == 0;
     }
 }
