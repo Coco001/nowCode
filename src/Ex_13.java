@@ -10,10 +10,12 @@
  * 返回：”Hello%20%20World”
  */
 public class Ex_13 {
+    
     public static void main(String[] args) {
         String test = "qw";
         System.out.println(replaceSpace(test, 2));
     }
+    
     private static String replaceSpace(String iniString, int length) {
         // write code here
         String res = "";
