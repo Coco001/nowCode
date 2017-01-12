@@ -3,6 +3,7 @@
  * 字符串变形检验
  */
 public class Ex_09 {
+    
     public boolean chkTransform(String A, int lena, String B, int lenb) {
         // write code here
         if (A == null || B == null || lena != lenb) {
