@@ -9,6 +9,7 @@
 public class Ex_12 {
     //思路：对字符串数组进行排序：
     //如果 str1 + str2 <　str2 + str1，则str1放在前面，否则，str2放在前面
+    
     public static void main(String[] args) {
         String[] test = new String[]{"abc","de"};
         System.out.println(findSmallest(test, 2));
@@ -27,6 +28,7 @@ public class Ex_12 {
         }
         return res;
     }
+    
     private static void sortArrs(String[] arrs, int n) {
         for (int i = 0; i < n-1; i++) {
             for (int j = 0; j < n - i - 1; j++) {
