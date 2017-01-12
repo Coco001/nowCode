@@ -6,19 +6,25 @@
  * 返回：3
  */
 public class Ex_15 {
+    
     public static void main(String[] args) {
         String test = "aabcd";
         System.out.println(longestSubstring(test, 5));
     }
+    
     private static int longestSubstring(String A, int n) {
+        
         if (A == null || n == 0) {
             return 0;
         }
+        
         char[] chars = A.toCharArray();
         int[] map = new int[256];
+        
         for (int i = 0; i < 256; i++) {//初始化每个字符首次出现的位置为-1
             map[i] = -1;
         }
+        
         int len = 0;
         int pre = -1;
         int cur;
@@ -39,6 +45,7 @@ public class Ex_15 {
             len = (i - pre) > len ? (i - pre) : len;
             map[chars[i]] = i;
         }*/
+        
         return len;
     }
 }
