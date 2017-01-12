@@ -6,10 +6,12 @@
  * 3、将整体逆序：DEABC
  */
 public class Ex_11 {
+    
     public static void main(String[] args) {
         String test = "ABCDE";
         System.out.println(stringTranslation(test, 5, 3));
     }
+    
     public static String stringTranslation(String A, int n, int len) {
         // write code here
         if (A == null || n == 0) {
@@ -21,6 +23,7 @@ public class Ex_11 {
         reverse(s, 0, n - 1);
         return String.valueOf(s);
     }
+    
     private static void reverse(char[] chas, int start, int end) {//逆序代码
         char temp;
         while (start < end) {
