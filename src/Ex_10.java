@@ -8,10 +8,12 @@
  * 返回："pig loves dog"
  */
 public class Ex_10 {
+    
     public static void main(String[] args) {
         String test = "dog loves pig";
         System.out.println(reverseSentence(test, 13));
     }
+    
     public static String reverseSentence(String A, int n) {
         if (A == null || n == 0) {
             return A;
